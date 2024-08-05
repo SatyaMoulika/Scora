@@ -8,11 +8,15 @@ const DifficultySelector = ({ difficulty, setDifficulty }) => {
   return (
     <div>
       <label>
-        Select Difficulty:
+        Cognitive Level:
         <select value={difficulty} onChange={handleChange}>
-          <option value="easy">Easy</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Hard</option>
+          <option value="Knowledge">Knowledge</option>
+          <option value="Comprehension">Comprehension</option>
+          <option value="Application">Application</option>
+          <option value="Analysis">Analysis</option>
+          <option value="Synthesis">Synthesis</option>
+          <option value="Evaluation">Evaluation</option>
+
         </select>
       </label>
     </div>
