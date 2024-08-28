@@ -21,6 +21,10 @@ function App() {
     formData.append('difficulty', difficulty);
     formData.append('numberOfQuestions', numberOfQuestions);
 
+    formData.forEach((value, key) => {
+      console.log(`${key}: ${value}`);
+    });
+    
     try {
       const response = await axios.post('http://localhost:8000/api/questions/generate', formData, {
         headers: {

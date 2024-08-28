@@ -3,7 +3,7 @@ import json
 from pdfminer.high_level import extract_text
 import openai
 
-API_KEY = "RCeTlHtsBYOAra8q1M88rRhJsKqQcqjf6vkfOgXDBcJ6WsyN" 
+API_KEY = "fw_3ZnT5X9bCzrkkhwPuhhT1yiz" 
 
 def extract_text_from_pdf(pdf_content):
     with open("temp.pdf", "wb") as f:
@@ -24,7 +24,7 @@ def generate_questions_from_text(text, difficulty, number_of_questions):
         "messages": [{
             "role": "USER",
             "content": (
-                f"Given the following text, generate {number_of_questions} questions based on "
+                f"Given the following text, generate exactly {number_of_questions} questions based on "
                 f"{difficulty} of Bloom's taxonomy. Text: {text}. Return the response in JSON format like below:\n"
                 '{\n'
                 '    "questions": [\n'
