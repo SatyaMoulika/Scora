@@ -15,7 +15,7 @@ def generate_questions_from_text(text, difficulty, number_of_questions):
     url = "https://api.fireworks.ai/inference/v1/chat/completions"
     payload = {
         "model": "accounts/fireworks/models/mixtral-8x22b-instruct",
-        "max_tokens": 50000,
+        # "max_tokens": 50000,
         "top_p": 1,
         "top_k": 40,
         "presence_penalty": 0,

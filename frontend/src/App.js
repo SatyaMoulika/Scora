@@ -19,12 +19,13 @@ function App() {
     const formData = new FormData();
     formData.append('file', file);
     formData.append('difficulty', difficulty);
-    formData.append('numberOfQuestions', numberOfQuestions);
-
+    formData.append('number_of_questions', numberOfQuestions);
+  
+    // Log each formData entry to ensure they are correct
     formData.forEach((value, key) => {
       console.log(`${key}: ${value}`);
     });
-    
+  
     try {
       const response = await axios.post('http://localhost:8000/api/questions/generate', formData, {
         headers: {
@@ -37,6 +38,7 @@ function App() {
       console.error('Error generating questions:', error);
     }
   };
+  
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
